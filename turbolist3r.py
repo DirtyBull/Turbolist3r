@@ -426,6 +426,7 @@ class AskEnum(enumratorBaseThreaded):
 
     def extract_domains(self, resp):
         link_regx = re.compile('<td>(.*?)</td>', re.IGNORECASE)
+        links_list = []
         try:
             links_list = link_regx.findall(resp)
             for link in links_list:
